@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="CONSTRUCALC">
+  <meta name="description" content="Calculadora orientativa de materiales de construcción">
+  <title>Calcular muro - CONSTRUCALC</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="header header-calculo">
+    <a href="04-menu.html" class="header-volver"><span class="flecha" aria-hidden="true">←</span><span>Volver al menú</span></a>
+    <div class="header-logo">CC</div>
+  </header>
+  <main class="contenedor">
+    <div class="tarjeta tarjeta-calculo">
+      <h1>Calcular muro</h1>
+      <p class="texto-intro">Ingresa las medidas para obtener una estimación de materiales.</p>
+      <form data-calculadora="muro" novalidate>
+
+        <div class="campo"><label for="espesor">Espesor del muro</label><select id="espesor" name="espesor" required><option value="20">20 cm</option><option value="30">30 cm</option></select></div>
+        <div class="campo"><label for="largo">Largo (m)</label><input type="number" id="largo" name="largo" step="0.01" min="0.01" placeholder="Ej.: 5" required></div>
+        <div class="campo"><label for="alto">Alto (m)</label><input type="number" id="alto" name="alto" step="0.01" min="0.01" placeholder="Ej.: 2,4" required></div>
+        <button type="submit" class="boton">CALCULAR</button>
+        <div class="mensaje-formulario" data-message role="status" aria-live="polite"></div>
+      </form>
+      <section class="resultado" aria-live="polite">
+        <h2>Resultado</h2>
+        <p class="resultado-inicial">Aquí aparecerán los materiales cuando pulses Calcular.</p>
+        <ul class="resultado-lista"></ul>
+        <p class="nota-calculo"></p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

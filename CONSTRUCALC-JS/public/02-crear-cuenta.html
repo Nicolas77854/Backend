@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="CONSTRUCALC">
+  <meta name="description" content="Calculadora orientativa de materiales de construcción">
+  <title>Crear cuenta - CONSTRUCALC</title>
+  <link rel="stylesheet" href="stylecrear.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <main class="contenedor">
+    <div class="tarjeta tarjeta-acceso">
+      <div class="caja-superior">CC</div>
+      <h1>CREAR CUENTA</h1>
+      <p class="texto-intro">Regístrate para empezar a calcular</p>
+      <form id="registro-form" novalidate>
+        <div class="campo">
+          <label for="usuario">Nombre de usuario</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Crea un usuario" autocomplete="username" required minlength="3" maxlength="50">
+        </div>
+        <div class="campo">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" name="contrasena" placeholder="Crea una contraseña" autocomplete="new-password" required minlength="8">
+          <small>Usa al menos 8 caracteres para esta demostración.</small>
+        </div>
+        <div class="campo">
+          <label for="confirmar">Confirmar contraseña</label>
+          <input type="password" id="confirmar" name="confirmar" placeholder="Repite la contraseña" autocomplete="new-password" required minlength="8">
+        </div>
+        <button type="submit" class="boton">CREAR CUENTA</button>
+        <div class="mensaje-formulario" data-message role="status" aria-live="polite"></div>
+      </form>
+      <div class="enlaces-secundarios">
+        <p><a href="01-login.html">Ya tengo cuenta</a></p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

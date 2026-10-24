@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="CONSTRUCALC">
+  <meta name="description" content="Calculadora orientativa de materiales de construcción">
+  <title>Recuperar contraseña - CONSTRUCALC</title>
+  <link rel="stylesheet" href="stylerecuperar.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <main class="contenedor">
+    <div class="tarjeta tarjeta-acceso">
+      <div class="caja-superior">CC</div>
+      <h1>RECUPERAR CONTRASEÑA</h1>
+      <p class="texto-intro">Para esta demo, necesitas el código que aparece en la consola donde ejecutaste Node.js.</p>
+      <form id="recuperar-form" novalidate>
+        <div class="campo">
+          <label for="usuario">Usuario de la cuenta</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Escribe tu usuario" autocomplete="username" required minlength="3" maxlength="50">
+        </div>
+        <div class="campo">
+          <label for="codigo-recuperacion">Código de recuperación</label>
+          <input type="password" id="codigo-recuperacion" name="codigo-recuperacion" placeholder="Código del administrador" required autocomplete="off">
+        </div>
+        <div class="campo">
+          <label for="nueva-contrasena">Nueva contraseña</label>
+          <input type="password" id="nueva-contrasena" name="nueva-contrasena" placeholder="Escribe una nueva contraseña" required minlength="8" autocomplete="new-password">
+        </div>
+        <div class="campo">
+          <label for="confirmar">Repite la nueva contraseña</label>
+          <input type="password" id="confirmar" name="confirmar" placeholder="Repite la nueva contraseña" required minlength="8" autocomplete="new-password">
+        </div>
+        <button type="submit" class="boton">RESTABLECER CONTRASEÑA</button>
+        <div class="mensaje-formulario" data-message role="status" aria-live="polite"></div>
+      </form>
+      <a href="01-login.html" class="volver">← Volver al inicio de sesión</a>
+    </div>
+  </main>
+</body>
+</html>

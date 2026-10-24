@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="CONSTRUCALC">
+  <meta name="description" content="Calculadora orientativa de materiales de construcción">
+  <title>Iniciar sesión - CONSTRUCALC</title>
+  <link rel="stylesheet" href="stylelogin.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <main class="contenedor">
+    <div class="tarjeta tarjeta-acceso">
+      <div class="caja-superior">CC</div>
+      <h1>CONSTRUCALC</h1>
+      <p class="texto-intro">Calculadora de materiales de construcción</p>
+      <form id="login-form" novalidate>
+        <div class="campo">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Escribe tu usuario" autocomplete="username" required minlength="3" maxlength="50">
+        </div>
+        <div class="campo">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" name="contrasena" placeholder="Escribe tu contraseña" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="boton">INICIAR SESIÓN</button>
+        <div class="mensaje-formulario" data-message role="status" aria-live="polite"></div>
+      </form>
+      <div class="enlaces-secundarios">
+        <p>¿No tienes cuenta? <a href="02-crear-cuenta.html">Regístrate</a></p>
+        <p>¿Olvidaste tu contraseña? <a href="03-recuperar.html">Recuperar contraseña</a></p>
+      </div>
+      <p class="aviso-demo">Proyecto de demostración. No uses contraseñas personales.</p>
+    </div>
+  </main>
+</body>
+</html>

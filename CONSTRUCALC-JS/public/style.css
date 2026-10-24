@@ -1,0 +1,260 @@
+:root {
+  --color-fondo: #f4eee7;
+  --color-tarjeta: #ffffff;
+  --color-texto: #2f3e46;
+  --color-acento: #e8874d;
+  --color-acento-oscuro: #c2632b;
+  --color-borde: #d6d0ca;
+  --radio: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  min-height: 86px;
+  padding: 14px clamp(16px, 5vw, 58px);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-bottom: 2px solid #ded8d2;
+}
+
+.header-volver {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #535b60;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.header-volver:hover {
+  color: #000;
+}
+
+.flecha {
+  width: 40px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  color: var(--color-acento-oscuro);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.header-logo {
+  width: 58px;
+  height: 44px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0aa5b;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.contenedor {
+  max-width: 520px;
+  margin: 32px auto;
+  padding: 0 16px 28px;
+}
+
+.tarjeta {
+  padding: 28px clamp(18px, 4vw, 30px);
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(47, 62, 70, .06);
+}
+
+.tarjeta h1 {
+  margin-bottom: 10px;
+  font-size: 1.55rem;
+  text-align: center;
+}
+
+.texto-intro {
+  margin: 0 auto 24px;
+  max-width: 400px;
+  color: #687176;
+  font-size: .96rem;
+  text-align: center;
+}
+
+.campo {
+  margin-bottom: 17px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: .93rem;
+  font-weight: 600;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--color-texto);
+  font: inherit;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: 2px solid #f6c7a6;
+  border-color: var(--color-acento);
+}
+
+.campo small {
+  display: block;
+  margin-top: 5px;
+  color: #667176;
+  font-size: .83rem;
+}
+
+.boton {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 14px;
+  background: var(--color-acento);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background: var(--color-acento-oscuro);
+}
+
+.boton:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.resultado {
+  margin-top: 22px;
+  padding: 17px;
+  background: #faf4ee;
+  border: 1px dashed #d7c3b2;
+  border-radius: 10px;
+  font-size: .95rem;
+}
+
+.resultado h2 {
+  margin-bottom: 10px;
+  font-size: 1.08rem;
+}
+
+.resultado ul {
+  margin: 0 0 0 18px;
+}
+
+.resultado li {
+  margin-bottom: 7px;
+}
+
+.resultado li strong {
+  font-weight: 700;
+}
+
+.resultado-inicial {
+  color: #687176;
+}
+
+.nota-calculo {
+  margin-top: 13px;
+  font-size: .83rem;
+  color: #5f666a;
+}
+
+.mensaje-formulario {
+  margin-top: 10px;
+  font-size: .9rem;
+}
+
+.mensaje-formulario:empty {
+  display: none;
+}
+
+.mensaje-error {
+  color: #a4262c;
+}
+
+.mensaje-ok {
+  color: #176b3a;
+}
+
+.volver {
+  display: block;
+  margin-top: 18px;
+  text-align: center;
+  color: #2673b8;
+  text-decoration: none;
+}
+
+.volver:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .header {
+    min-height: 74px;
+    padding: 10px 14px;
+  }
+
+  .header-volver {
+    font-size: .92rem;
+    gap: 7px;
+  }
+
+  .flecha {
+    width: 34px;
+    height: 32px;
+  }
+
+  .header-logo {
+    width: 49px;
+    height: 39px;
+    font-size: 21px;
+  }
+
+  .contenedor {
+    margin-top: 20px;
+  }
+
+  .tarjeta {
+    padding: 22px 17px;
+  }
+}
